@@ -2,11 +2,15 @@ class SeminarsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
 
   def index
-    @seminars = Seminar.where(:is_hidden => false)..order("created_at DESC")
+    @seminars = Seminar.published.recent
   end
 
   def show
       @seminar = Seminar.find(params[:id])
+      if @seminar.is_hidden
+      flash[:warning] = "This seminar already archieved"
+      redirect_to root_path
+      end
   end
 
   def new

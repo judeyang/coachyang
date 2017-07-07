@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :seminars
-
-  namespace :admin do
-    resources :seminars
+  resources :seminars do
+    resources :bookings
   end
 
-    root 'seminars#index'
+  namespace :admin do
+    resources :seminars do
+      member do
+        post :publish
+        post :hide
+      end
+      resources :bookings
+    end
+  end
+
+    root 'welcome#index'
 end
