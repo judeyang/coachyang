@@ -64,6 +64,6 @@ class Admin::SeminarsController < ApplicationController
     private
 
     def seminar_params
-      params.require(:seminar).permit(:title, :description, :is_hidden)
+      params.require(:seminar).permit(:title, :description, :is_hidden,:status)
     end
 end

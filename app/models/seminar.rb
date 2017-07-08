@@ -13,4 +13,8 @@ class Seminar < ApplicationRecord
 
   scope :recent, -> { order('created_at DESC') }
   scope :published, -> { where(is_hidden: false) }
+
+  STATUS = ["draft","sem","camp"]
+  validates_inclusion_of :status, :in => STATUS
+
 end

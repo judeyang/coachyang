@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :products
     resources :seminars do
       member do
         post :publish
@@ -15,5 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
-    root 'welcome#index'
+  resources :products
+
+    root 'seminars#index'
 end

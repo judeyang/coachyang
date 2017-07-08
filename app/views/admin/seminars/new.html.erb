@@ -6,5 +6,15 @@
 <%= f.input :description %>
 <%= f.input :is_hidden %>
 
+<div class="form-group">
+    <%= f.label :status %>
+    <% Seminar::STATUS.each do |status| %>
+      <label>
+        <%= f.radio_button :status, status %>
+        <%= t(status, :scope => "seminar.status") %>
+      </label>
+    <% end %>
+</div>
+
   <%= f.submit "Submit" %>
 <% end %>
