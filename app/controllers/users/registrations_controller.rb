@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_user!
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+
 
 
   def edit
@@ -17,11 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  protected
 
-  def configure_permitted_parameters
-   devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
-  end
 
   private
 
