@@ -1,1 +1,428 @@
-<h1> Hello World! </h1>
+
+<!DOCTYPE html>
+<html lang="en" class="wide wow-animation smoothscroll">
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+
+
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+
+      <!-- Page Content-->
+      <main class="page-content">
+        <section>
+          <!-- Swiper-->
+          <div class="swiper-outer">
+            <div data-simulate-touch="false" data-slide-effect="fade" data-autoplay="3000" class="swiper-container swiper-slider swiper-slider-variant-1">
+              <div class="swiper-wrapper">
+                <div data-slide-bg="images/index-01.jpg" class="swiper-slide">
+                  <div class="swiper-slide-caption">
+                    <div class="shell shell-wide">
+                      <div class="range">
+                        <div class="cell-md-7 cell-lg-7 context-dark cell-xs-middle">
+                          <h1>welcome to our club</h1>
+                          <p class="big">Since the opening in 1990, the Boxing Day Club has become a popular place<br class="veil reveal-xl-block">among boxing & fitness enthusiasts and professionals.</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-slide-bg="images/home-2-02.jpg" class="swiper-slide">
+                  <div class="swiper-slide-caption">
+                    <div class="shell shell-wide">
+                      <div class="range">
+                        <div class="cell-md-7 cell-lg-7 context-dark cell-xs-middle">
+                          <h1>BOXING FOR EVERYONE</h1>
+                          <p class="big">Our club has all necessary equipment and professional coaches to help<br class="veil reveal-xl-block">anyone who comes to us become a professional.</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-slide-bg="images/home-2-03.jpg" class="swiper-slide">
+                  <div class="swiper-slide-caption">
+                    <div class="shell shell-wide">
+                      <div class="range">
+                        <div class="cell-md-7 cell-lg-7 context-dark cell-xs-middle">
+                          <h1>INNOVATIVE TRAINING</h1>
+                          <p class="big">At Boxing Day, we use the latest training techniques, which are developed<br class="veil reveal-xl-block">by our coaches to make your boxing lessons more successful.</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-on-slider">
+              <div class="shell shell-wide">
+                <div class="range">
+                  <div class="cell-md-7 cell-lg-7 context-dark cell-xs-middle"></div>
+                  <div class="cell-md-5 cell-lg-4 cell-xl-3 cell-xl-preffix-1 offset-top-220 offset-md-top-0">
+                    <div class="well-variant-3 swiper-on-slider-inner">
+                      <h2>Register for Classes</h2>
+                      <!-- RD Mailform-->
+                      <form method="post" action="bat/rd-mailform.php" class="offset-top-26 range rd-mailform">
+                        <div class="cell-sm-6 cell-md-12">
+                          <div class="form-group">
+                            <label for="contact-name" class="form-label">Your name</label>
+                            <input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-control form-control-gray-base">
+                          </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-12 offset-top-20 offset-sm-top-0 offset-md-top-20">
+                          <div class="form-group">
+                            <label for="contact-phone" class="form-label">Phone</label>
+                            <input id="contact-phone" type="text" name="phone" data-constraints="@Required @Integer" class="form-control form-control-gray-base">
+                          </div>
+                        </div>
+                        <div class="range offset-top-20">
+                          <div class="cell-sm-6">
+                            <!--Select 2-->
+                            <div class="form-group">
+                              <select data-placeholder="Players" data-minimum-results-for-search="Infinity" data-constraints="@Required" class="form-control form-control-gray-base select-filter">
+                                <option>Players</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="cell-sm-6 offset-top-20 offset-sm-top-0">
+                            <div class="form-group">
+                              <label for="date" class="form-label">Date</label>
+                              <input id="date" data-time-picker="date" type="text" name="date" data-constraints="@Required" class="form-control form-control-gray-base">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cell-md-12 offset-top-20">
+                          <button class="btn btn-block btn-primary btn-sm">Book your lesson</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-80 section-md-110">
+          <div class="shell shell-wide">
+            <h2>Past Championships</h2>
+            <hr class="divider divider-60 divider-primary offset-top-32">
+            <!-- Owl Carousel-->
+            <div data-dots="true" data-items="1" data-xs-items="2" data-md-items="3" data-stage-padding="15" data-margin="30" data-mouse-drag="false" class="offset-top-36 offset-md-top-60 text-md-left owl-dots-md owl-carousel">
+              <div class="unit-shrink unit unit-lg-horizontal unit-spacing-xs">
+                <div class="unit-left">
+                  <div><img src="images/home-3-03.jpg" width="200" height="270" alt="" class="img-responsive reveal-inline-block"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="text-bold p"><a href="event-single.html">San Diego Championship</a></h5>
+                  <p class="offset-top-26"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-calendar"></span><span class="text-middle">September 2-5</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-account"></span><span class="text-middle">20 participants</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-trophy-variant"></span><span class="text-middle">$100,000</span></p><a href="event-single.html" class="btn btn-default btn-sm offset-top-18">book now</a>
+                </div>
+              </div>
+              <div class="unit-shrink unit unit-lg-horizontal unit-spacing-xs">
+                <div class="unit-left">
+                  <div><img src="images/home-3-04.jpg" width="200" height="270" alt="" class="img-responsive reveal-inline-block"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="text-bold p"><a href="event-single.html">Southern States Championship</a></h5>
+                  <p class="offset-top-26"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-calendar"></span><span class="text-middle">September 12-15</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-account"></span><span class="text-middle">25 participants</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-trophy-variant"></span><span class="text-middle">$150,000</span></p><a href="event-single.html" class="btn btn-default btn-sm offset-top-18">book now</a>
+                </div>
+              </div>
+              <div class="unit-shrink unit unit-lg-horizontal unit-spacing-xs">
+                <div class="unit-left">
+                  <div><img src="images/home-3-05.jpg" width="200" height="270" alt="" class="img-responsive reveal-inline-block"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="text-bold p"><a href="event-single.html">Open Amateur Championship</a></h5>
+                  <p class="offset-top-26"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-calendar"></span><span class="text-middle">September 18-21</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-account"></span><span class="text-middle">30 participants</span></p>
+                  <p class="offset-top-14"><span class="inset-right-5 text-middle icon icon-lg text-primary mdi mdi-trophy-variant"></span><span class="text-middle">$200,000</span></p><a href="event-single.html" class="btn btn-default btn-sm offset-top-18">book now</a>
+                </div>
+              </div>
+            </div>
+            <div class="offset-top-32 offset-md-top-60"><a href="events.html" class="btn btn-primary btn-sm">view all tournaments</a></div>
+          </div>
+        </section>
+        <section class="bg-bunting bg-wrapper">
+          <div class="shell shell-wide">
+            <div class="range text-md-left">
+              <div class="cell-md-5 cell-lg-4 cell-lg-preffix-1 section-80 section-md-110">
+                <h2>A Few Words About Our Club</h2>
+                <hr class="divider divider-60 divider-primary offset-top-32 divider-md-left">
+                <p class="offset-top-42">We were established in 1990 with a belief that in a safe environment fight arts can be an effective and fun platform for overall fitness and health.</p>
+                <p>With that in mind, Boxing Day brought together the best fight and fitness instructors in the industry – from Boxing to Muay Thai, Jiu Jitsu, MMA etc. It was done with the goal to create a unique and exhilarating training program.</p>
+                <div class="range offset-top-42 text-center">
+                  <div class="cell-sm-4">
+                    <div class="counter-sm">
+                      <!-- CountTo-->
+                      <div data-from="0" data-to="26" class="counter"></div>
+                      <div class="counter-title offset-top-12">Years of Experience</div>
+                      <hr class="divider divider-white divider-30">
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="counter-sm">
+                      <!-- CountTo-->
+                      <div data-from="0" data-to="18" class="counter"></div>
+                      <div class="counter-title offset-top-12">annual tournaments</div>
+                      <hr class="divider divider-white divider-30">
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="counter-sm">
+                      <!-- CountTo-->
+                      <div data-from="0" data-to="26" class="counter"></div>
+                      <div class="counter-title offset-top-12">Qualified instructors</div>
+                      <hr class="divider divider-white divider-30">
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-32 offset-md-top-60"><a href="about.html" class="btn btn-primary btn-sm">learn more</a></div>
+              </div>
+              <div class="offset-top-0 cell-md-preffix-2 cell-md-5 bg-primary-md-dark cell-lg-5 cell-lg-preffix-2 section-80 section-md-110">
+                <h2>Boxing Benefits</h2>
+                <hr class="divider divider-60 divider-white offset-top-32 divider-md-left">
+                <div class="range text-sm-left text-white">
+                  <div class="cell-sm-6 cell-md-12 cell-lg-6">
+                    <div class="unit unit-horizontal reveal-inline-flex text-left">
+                      <div class="unit-left"><img src="images/icon-09.jpg" width="60" height="60" alt=""></div>
+                      <div class="unit-body">
+                        <h6>urn Fat/ Increased<br>Muscle Tone</h6>
+                      </div>
+                    </div>
+                    <p class="inset-xl-right-14 offset-top-14 offset-lg-top-22">One of the major benefits of boxing is that it can burn as much as 500 Cal...</p>
+                  </div>
+                  <div class="cell-sm-6 cell-md-12 cell-lg-6 offset-top-32 offset-sm-top-0 offset-md-top-32 offset-lg-top-0">
+                    <div class="unit unit-horizontal reveal-inline-flex text-left">
+                      <div class="unit-left"><img src="images/icon-10.jpg" width="60" height="60" alt=""></div>
+                      <div class="unit-body">
+                        <h6>Full Body<br>Workout</h6>
+                      </div>
+                    </div>
+                    <p class="inset-xl-right-14 offset-top-14 offset-lg-top-22">Boxing involves the movement of many body parts such as legs and hips...</p>
+                  </div>
+                  <div class="cell-sm-6 cell-md-12 cell-lg-6 offset-top-32 offset-lg-top-60">
+                    <div class="unit unit-horizontal reveal-inline-flex text-left">
+                      <div class="unit-left"><img src="images/icon-11.jpg" width="60" height="60" alt=""></div>
+                      <div class="unit-body">
+                        <h6>Stress Relief and<br>Improved Confidence</h6>
+                      </div>
+                    </div>
+                    <p class="inset-xl-right-14 offset-top-14 offset-lg-top-22">Boxing will not only help you get in shape, but it will also improve your confidence...</p>
+                  </div>
+                  <div class="cell-sm-6 cell-md-12 cell-lg-6 offset-top-32 offset-lg-top-60">
+                    <div class="unit unit-horizontal reveal-inline-flex text-left">
+                      <div class="unit-left"><img src="images/icon-12.jpg" width="60" height="60" alt=""></div>
+                      <div class="unit-body">
+                        <h6>Build Strong<br>Bones</h6>
+                      </div>
+                    </div>
+                    <p class="inset-xl-right-14 offset-top-14 offset-lg-top-22">Boxing involves a lot of resistance from both the equipment and your bone structure...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-80 section-md-110">
+          <div class="shell shell-wide">
+            <h2>The Pros & Cons About Boxing</h2>
+            <hr class="divider divider-60 divider-primary offset-top-32">
+            <!-- Owl Carousel-->
+            <div data-dots="true" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" class="text-md-left owl-carousel offset-top-60">
+                    <!-- Thumbnail-->
+                    <div class="thumbnail-variant-3">
+                      <div><img src="images/home-3-06.jpg" width="570" height="370" alt="" class="img-responsive center-block"></div>
+                      <div class="caption">
+                        <h6><a href="#">Build a Healthy, Fit Body</a></h6>
+                        <p>Training in boxing can transform your body. Several elements of a standard boxing workout, including running, jumping rope, hitting the...</p><a href="#" class="btn btn-primary btn-sm offset-top-8">Learn more</a>
+                      </div>
+                    </div>
+                    <!-- Thumbnail-->
+                    <div class="thumbnail-variant-3">
+                      <div><img src="images/home-3-07.jpg" width="570" height="370" alt="" class="img-responsive center-block"></div>
+                      <div class="caption">
+                        <h6><a href="#">Punch Away the Stress</a></h6>
+                        <p>Beyond the manyphysical benefits of boxing, it's impossible to discount the emotional perks of this form of exercise. As with many forms of...</p><a href="#" class="btn btn-primary btn-sm offset-top-8">Learn more</a>
+                      </div>
+                    </div>
+                    <!-- Thumbnail-->
+                    <div class="thumbnail-variant-3">
+                      <div><img src="images/home-3-08.jpg" width="570" height="370" alt="" class="img-responsive center-block"></div>
+                      <div class="caption">
+                        <h6><a href="#">Prepare for Bumps and Bruises</a></h6>
+                        <p>A solo boxing workout can improve your health, but once you add contact drills such as sparring to your gym visits, you increase your...</p><a href="#" class="btn btn-primary btn-sm offset-top-8">Learn more</a>
+                      </div>
+                    </div>
+            </div>
+            <div class="offset-top-32 offset-md-top-60"><a href="#" class="btn btn-primary btn-sm">view more info</a></div>
+          </div>
+        </section>
+        <section class="section-80 section-md-110 bg-bunting">
+          <div class="shell shell-wide">
+            <h2>Our Team</h2>
+            <hr class="divider divider-60 divider-primary offset-top-32">
+            <div class="range offset-top-36 text-lg-left range-xs-center">
+              <div class="cell-sm-9 cell-md-6">
+                <div class="unit unit-lg-horizontal bg-white unit-xlg-middle unit-spacing-sm thumbnail-variant-4">
+                  <div class="unit-left"><img src="images/home-3-09.jpg" width="300" height="372" alt="" class="img-responsive center-block"></div>
+                  <div class="unit-body">
+                    <div class="caption">
+                      <h3 class="text-bold text-primary"><a href="#">Mark Johnson</a></h3>
+                      <div class="caption-title">coach</div>
+                      <p class="offset-top-14 offset-md-top-20"><span style="color: #3a3a3b;" class="text-middle icon mdi mdi-phone"></span><a href="callto:#" class="text-middle inset-left-5 text-gray">1-800-1234-567</a></p>
+                      <p class="offset-top-14 offset-md-top-20 caption-text text-gray">Mark is the owner & founder of Boxing Day Club and he has over 15 years of experience...</p>
+                      <ul class="list-inline offset-top-14 offset-md-top-20 list-inline-3">
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-facebook"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-twitter"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-google"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-youtube-play"></a></li>
+                        <li class="veil reveal-xl-inline-block"><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-tumblr"></a></li>
+                      </ul><a href="#" class="btn btn-primary btn-sm offset-top-14 offset-md-top-20 offset-xl-top-32">get in touch</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell-sm-9 cell-md-6 offset-top-32 offset-md-top-0">
+                <div class="unit unit-lg-horizontal bg-white unit-xlg-middle unit-spacing-sm thumbnail-variant-4">
+                  <div class="unit-left"><img src="images/home-3-10.jpg" width="300" height="372" alt="" class="img-responsive center-block"></div>
+                  <div class="unit-body">
+                    <div class="caption">
+                      <h3 class="text-bold text-primary"><a href="#">Adrian Bradshaw</a></h3>
+                      <div class="caption-title">instructor</div>
+                      <p class="offset-top-14 offset-md-top-20"><span style="color: #3a3a3b;" class="text-middle icon mdi mdi-phone"></span><a href="callto:#" class="text-middle inset-left-5 text-gray">1-800-1234-567</a></p>
+                      <p class="offset-top-14 offset-md-top-20 caption-text text-gray">Adrian comes with the qualifications, but more importantly 10 plus years experience to back...</p>
+                      <ul class="list-inline offset-top-14 offset-md-top-20 list-inline-3">
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-facebook"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-twitter"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-google"></a></li>
+                        <li><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-youtube-play"></a></li>
+                        <li class="veil reveal-xl-inline-block"><a href="#" class="icon icon-circle icon-gray-light icon-xs fa-tumblr"></a></li>
+                      </ul><a href="#" class="btn btn-primary btn-sm offset-top-14 offset-md-top-20 offset-xl-top-32">get in touch</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offset-top-32 offset-md-top-60"><a href="#" class="btn btn-sm btn-default">view all team</a></div>
+          </div>
+        </section>
+        <section class="section-80 section-md-110">
+          <div class="shell shell-wide">
+            <h2>Testimonials</h2>
+            <hr class="divider divider-60 divider-primary offset-top-32">
+            <!-- Owl Carousel-->
+            <div data-nav="true" data-dots="true" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="50" class="text-left owl-carousel offset-top-60 owl-static-nav owl-carousel-navs">
+              <blockquote class="quote-boxed">
+                <div class="unit unit-horizontal unit-middle">
+                  <div class="unit-left"><img src="images/home-3-11.jpg" width="80" height="80" alt=""></div>
+                  <div class="unit-body">
+                    <h6 class="text-primary">George Barrett</h6>
+                    <p class="text-italic offset-top-5">Club member</p>
+                  </div>
+                </div>
+                <p>
+                  <q>I achieve more results in the hour I spend with Mark than if I spent all week at my local gym. I have more fun, better results and ultimately, greater fitness all because of the dedication he puts into me.</q>
+                </p>
+              </blockquote>
+              <blockquote class="quote-boxed">
+                <div class="unit unit-horizontal unit-middle">
+                  <div class="unit-left"><img src="images/home-3-12.jpg" width="80" height="80" alt=""></div>
+                  <div class="unit-body">
+                    <h6 class="text-primary">Carl Smith</h6>
+                    <p class="text-italic offset-top-5">Club member</p>
+                  </div>
+                </div>
+                <p>
+                  <q>The personal training sessions I’ve been doing at the club are amazing. The feeling you get from the club can’t be described in anything less than in a highly positive manner.</q>
+                </p>
+              </blockquote>
+              <blockquote class="quote-boxed">
+                <div class="unit unit-horizontal unit-middle">
+                  <div class="unit-left"><img src="images/home-3-13.jpg" width="80" height="80" alt=""></div>
+                  <div class="unit-body">
+                    <h6 class="text-primary">Alice Davidson</h6>
+                    <p class="text-italic offset-top-5">Club member</p>
+                  </div>
+                </div>
+                <p>
+                  <q>I used to believe that Boxing as a guy’s sport. I couldn’t have been more wrong. It’s a brilliant way to stay in shape. I can’t thank you enough for training and support you’ve given me.</q>
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Page Footer-->
+
+      <!-- {%FOOTER_LINK}-->
+    </div>
+    <!-- Global Mailform Output-->
+    <div id="form-output-global" class="snackbars"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div tabindex="-1" role="dialog" aria-hidden="true" class="pswp">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button title="Close (Esc)" class="pswp__button pswp__button--close"></button>
+            <button title="Share" class="pswp__button pswp__button--share"></button>
+            <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button>
+            <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button>
+          <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Java script-->
+  
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7078796-5']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+  <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager -->
+</html>

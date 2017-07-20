@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations" }
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :seminars do
     resources :bookings
@@ -52,5 +52,5 @@ Rails.application.routes.draw do
      resources :orders
      end
 
-    root 'seminars#index'
+    root 'welcome#index'
 end
