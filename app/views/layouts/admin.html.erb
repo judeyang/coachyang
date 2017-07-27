@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Coach Yang - Admin </title>
-        <%= csrf_meta_tags %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </head>
 
     <body>
 
-        <div class="container-fluid">
-            <%= render "common/navbar" %>
-            <%= render "common/flashes" %>
-            <div class="row">
-              <div class="col-md-2">
-                <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-                  <li class="active"><%= link_to("Seminar", admin_seminars_path ) %> </li>
-                  <li class="active"> <%= link_to("Products", admin_products_path) %> </li>
-                  <li class="active"> <%= link_to("Orders", admin_orders_path) %> </li>
-                </ul>
-              </div>
 
-              <div class="col-md-10">
-                <%= yield %>
-              </div>
-           </div>
-        </div>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coach Yang - Admin </title>
+    <%= csrf_meta_tags %>
 
-        <%= render "common/footer" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:300,400,700%7CRoboto:300,300italic,400,700,700italic">
+    <link rel="stylesheet" href="/css/style.css">
 
-    </body>
+</head>
+
+<div class="row container-fluid">
+  <%= render "/common/navbar" %>
+    <%= render "common/flashes" %>
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li class="active"><%= link_to("Seminar", admin_seminars_path ) %> </li>
+          <li class="active"> <%= link_to("Products", admin_products_path) %> </li>
+          <li class="active"> <%= link_to("Orders", admin_orders_path) %> </li>
+        </ul>
+      </div>
+
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+   </div>
+</div>
+
+<%= render "common/footer" %>
+
+</body>
+    <script src="/js/core.min.js"></script>
+    <script src="/js/script.js"></script>
 </html>
