@@ -1,0 +1,26 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <div style="display: none;">
+      <%= f.input :content %>
+    </div>
+    <div id="editor">
+      <%== @post.content %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  <script>
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    editor.customConfig.uploadImgShowBase64 = true
+    editor.customConfig.onchange = function (content) {
+      $("#post_content").html(content)
+    }
+    editor.create()
+  </script>
+<% end %>

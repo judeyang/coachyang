@@ -16,4 +16,5 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/modal
+//= require wangeditor/release/wangEditor
 //= require_tree .

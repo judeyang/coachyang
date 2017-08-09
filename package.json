@@ -1,0 +1,12 @@
+{
+  "name": "coachyang",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/imtinge/coachyang.git",
+  "author": "imtinge <imtinge@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "wangeditor": "^3.0.7"
+  }
+}
