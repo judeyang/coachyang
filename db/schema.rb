@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714175055) do
+ActiveRecord::Schema.define(version: 20170809042710) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "seminar_id"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20170714175055) do
     t.string   "payment_method"
     t.string   "aasm_state",       default: "order_placed"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "product_lists", force: :cascade do |t|
