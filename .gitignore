@@ -29,3 +29,4 @@ public/uploads
 config/database.yml
 config/puma.rb
 config/secrets.yml
+config/deploy
