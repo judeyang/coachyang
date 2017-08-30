@@ -1,0 +1,20 @@
+<h1> Add a seminar </h1>
+
+<%= simple_form_for [:admin,@seminar] do |f| %>
+
+<%= f.input :title %>
+<%= f.input :description %>
+<%= f.input :is_hidden %>
+
+<div class="form-group">
+    <%= f.label :status %>
+    <% Seminar::STATUS.each do |status| %>
+      <label>
+        <%= f.radio_button :status, status %>
+        <%= t(status, :scope => "seminar.status") %>
+      </label>
+    <% end %>
+</div>
+
+  <%= f.submit "Submit" %>
+<% end %>

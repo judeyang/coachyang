@@ -1,0 +1,127 @@
+<div class="page text-center">
+  <!-- Page Header-->
+  <header class="page-header">
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap">
+      <nav data-layout="rd-navbar-sidebar" data-sm-layout="rd-navbar-sidebar" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="85px" class="rd-navbar-base rd-navbar-corporate rd-navbar">
+        <div class="rd-navbar-inner">
+          <!-- RD Navbar Panel-->
+          <div class="rd-navbar-panel">
+            <!-- RD Navbar Toggle-->
+            <button data-rd-navbar-toggle=".rd-navbar-sub-panel" class="rd-navbar-toggle"><span></span></button>
+            <!-- RD Navbar Brand-->
+            <div class="rd-navbar-brand"><a href="/" class="reveal-inline-block"><img src="/images/logo.png" width="266" height="49" alt=""></a></div>
+            <div data-rd-navbar-toggle=".rd-navbar-contacts" class="rd-navbar-collapse-toggle"><span></span></div>
+            <div class="rd-navbar-contacts">
+              <div class="media p">
+                <div class="media-left"><span class="icon icon-sm mdi mdi-instagram"></span></div>
+                <div class="media-body">
+                  <p><a href="callto:#" class="text-base">yangyang7878</a>
+                  </p>
+                </div>
+              </div>
+              <div class="media p">
+                <div class="media-left"><span class="icon icon-sm mdi mdi-map-marker"></span></div>
+                <div class="media-body"><a href="#" class="text-base">No.868 Tongan Road,Qingdao,China</a></div>
+              </div>
+              <div class="media p">
+                <div class="media-left"><span class="icon icon-sm mdi mdi-email-outline"></span></div>
+                <div class="media-body"><a href="#" class="text-base">info@coachyang.com</a></div>
+              </div>
+            </div>
+            <div class="rd-navbar-shop"><%= link_to carts_path do  %><span class="icon mdi mdi-cart"></span><span class="text-middle">Shopping Cart:</span><span class="rd-navbar-shop-counter"><%= current_cart.products.count %></span></a><% end %></div>
+          </div>
+          <div class="rd-navbar-sub-panel">
+             <div class="rd-navbar-sub-panel-inner">
+               <!-- RD Navbar Brand-->
+               <div class="rd-navbar-brand"><a href="/" class="reveal-inline-block"><img src="/images/logo.png" width="266" height="49" alt=""></a></div>
+               <div class="rd-navbar-nav">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="about.html">About</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="/">Overview</a></li>
+                      <li><a href="/">Experience</a></li>
+                      <li><a href="/">FAQ</a></li>
+                      <li><a href="/">Careers</a></li>
+                    </ul>
+                  </li>
+                  <li><%= link_to("Seminars", seminars_path ) %></li>
+                  <li><%= link_to("Products", products_path ) %></li>
+
+                  <% if !current_user %>
+                  <li><a href="#" data-toggle="modal" data-target="#signup-modal">Signup</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#login-modal" class="fa fa-sign-in">Login</a></li>
+                  <% else %>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi!,<%= current_user.display_name %></a>
+
+                      <ul class="rd-navbar-dropdown">
+                          <% if current_user.admin? %>
+                          <li>
+                            <%= link_to("Admin's", admin_products_path ) %>
+                          </li>
+                          <% end %>
+                          <li>
+                            <%= link_to("Personal Orders", account_orders_path ) %>
+                          </li>
+                          <li>
+                            <%= link_to("Profile", edit_user_registration_path ) %>
+                          </li>
+                          <li>
+                            <%= link_to destroy_user_session_path, method: :delete do %>
+                              <i class="fa fa-sign-out"> 登出</i>
+                            <% end %>
+                          </li>
+                      </ul>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+  <div class="loginmodal-container">
+   <h2>Login</h2>
+   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     <div class="form-inputs">
+       <%= f.input :email, required: false, autofocus: true %>
+
+       <%= f.input :password, required: false %>
+       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+     </div>
+     <div class="form-actions">
+       <%= f.button :submit, "Log in" %>
+     </div>
+   <% end %>
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+  <div class="loginmodal-container">
+  <h2>Signup</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :email, required: true, autofocus: true %>
+      <%= f.input :username,required: true %>
+      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+      <%= f.input :password_confirmation, required: true %>
+    </div>
+    <div class="form-actions">
+        <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+  </div>
+  </div>
+  </div>

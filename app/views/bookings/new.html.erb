@@ -1,0 +1,8 @@
+<h3> Booking to  <%= @seminar.title %> </h3>
+
+<hr>
+
+<%= simple_form_for [@seminar, @booking] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "送出" %>
+<% end %>

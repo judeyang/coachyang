@@ -1,0 +1,20 @@
+<div class="pull-right">
+  <%= link_to("Add a seminar", new_seminar_path, :class => "btn btn-default" ) %>
+</div>
+
+<table class="table table-boldered">
+  <% @seminars.each do |seminar| %>
+  <tr>
+    <td>
+      <%= link_to(seminar.title, seminar_path(seminar)) %>
+    </td>
+    <td>
+     <%= link_to("Edit", edit_seminar_path(seminar)) %> |
+     <%= link_to("Destroy", seminar_path(seminar), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
+   </td>
+    <td>
+      <%= seminar.created_at %>
+    </td>
+  </tr>
+  <% end %>
+</table>

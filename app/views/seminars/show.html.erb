@@ -1,0 +1,9 @@
+<h1> <%= @seminar.title %> </h1>
+
+<p>
+  <%= simple_format(@seminar.description) %>
+
+</p>
+<div class="text-center">
+  <%= link_to("Booking", new_seminar_booking_path(@seminar), :style => "font-size: 30px; text-decoration:underline;") %>
+</div>
