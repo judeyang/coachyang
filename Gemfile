@@ -47,6 +47,9 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'mina', require: false
+gem 'mina-puma', require: false
+
 
 
 group :development do
@@ -63,5 +66,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'mysql2'
 end
